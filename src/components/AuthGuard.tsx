@@ -11,12 +11,15 @@ export default function AuthGuard({ children }: { children: React.ReactNode }) {
             try {
                 // Check if we have an auth token
                 const authToken = localStorage.getItem('auth_token') || sessionStorage.getItem('auth_token');
+                console.log('Admin AuthGuard: Checking for auth token:', !!authToken);
 
                 if (!authToken) {
-                    console.log('No auth token found, redirecting to auth service');
+                    console.log('Admin AuthGuard: No auth token found, redirecting to auth service');
                     window.location.href = 'https://auth.arya.services/login';
                     return;
                 }
+
+                console.log('Admin AuthGuard: Found auth token, verifying...');
 
                 // Verify the token with the auth service
                 const response = await fetch('https://auth.arya.services/api/verify-token', {
