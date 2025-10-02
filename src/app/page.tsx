@@ -97,12 +97,12 @@ export default function Home() {
                 </div>
 
                 <div className="mt-8 space-x-4">
-                  <a
-                    href="https://app.arya.services"
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
-                  >
-                    ← Back to Main App
-                  </a>
+                <a
+                  href={`https://app.arya.services?auth_token=${encodeURIComponent(localStorage.getItem('auth_token') || '')}`}
+                  className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
+                >
+                  ← Back to Main App
+                </a>
                   <button
                     onClick={handleLogout}
                     disabled={loading}
