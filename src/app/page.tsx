@@ -73,7 +73,7 @@ export default function Home() {
                       🍪 Same Session
                     </h3>
                     <p className="text-blue-700">
-                      You're using the same session cookie from the auth service.
+                      You&apos;re using the same session cookie from the auth service.
                     </p>
                   </div>
 
@@ -82,7 +82,7 @@ export default function Home() {
                       🚀 SSO Working
                     </h3>
                     <p className="text-green-700">
-                      No need to login again - you're automatically authenticated!
+                      No need to login again - you&apos;re automatically authenticated!
                     </p>
                   </div>
 
@@ -91,7 +91,7 @@ export default function Home() {
                       🔄 Cross-Domain
                     </h3>
                     <p className="text-purple-700">
-                      Visit app.local:3001 - you'll be logged in there too!
+                      Visit app.local:3001 - you&apos;ll be logged in there too!
                     </p>
                   </div>
                 </div>
